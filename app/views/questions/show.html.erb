@@ -6,6 +6,7 @@
 
 <h3>Enter your answer</h3>
 
+
     <%= form_for @answer do |f| %>
         
         <%= f.label :text %>
@@ -18,7 +19,7 @@
     <% end %>
 
 
-alert 
+
 <br>
 <br>
 <%= link_to "next question", question_path(Question.all.sample.id) %>
