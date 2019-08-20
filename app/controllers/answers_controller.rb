@@ -1,14 +1,23 @@
 class AnswersController < ApplicationController
 
+    def index
+        @answers = Answer.all
+    end
+
     def create
-        @answer = Answer.create(answer_params)
-        if @answer.save
-            
+        @answer = Answer.new(answer_params)
+        if @answer.valid?
+            @answer.save
+            # byebug
+            redirect_to question_path(@answer.question_id)
         else
-            render :new
+            redirect_to question_path(@answer.question_id)
         end
     end
 
+    def show
+        @answer = Answer.find(params[:id])
+    end
 
     private
 
