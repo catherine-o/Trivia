@@ -8,10 +8,8 @@ class AnswersController < ApplicationController
         @answer = Answer.new(answer_params)
         if @answer.valid?
             @answer.save
-            # byebug
-            redirect_to question_path(@answer.question_id)
-        else
-            redirect_to question_path(@answer.question_id)
+            
+          
         end
     end
 
