@@ -1,6 +1,8 @@
 <h1>Choose a Category</h1>
 
-<% @rounds.each do |round| %>
-    <%= round.questions %>
-       
+
+<ul>
+    <% @rounds.each do |round| %>
+        <li><%= link_to round.find_categories[0], question_path(round.questions[0]) %></li><br>
     <% end %>
+</ul>
