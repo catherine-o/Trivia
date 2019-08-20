@@ -1,6 +1,21 @@
 <h1>Question:</h1>
 
-<p><%= @question.question_text %> <br><br>
+<h2><%= @question.question_text %></h2><br><br>
 
-<%= link_to "Click to Answer", new_team_answer_path(question_id: @question.id) %>
+
+
+<h3>Enter your answer</h3>
+
+<%= form_for @answer do |f| %>
+    
+    <%= f.label :text %>
+    <%= f.text_field :text %>
+
+    <%= f.hidden_field :question_id, value: @question.id  %>
+
+
+    <%= f.submit "Submit Answer"%>
+
+<% end %>
+
 

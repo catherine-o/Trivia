@@ -1,23 +1,21 @@
 class TeamAnswersController < ApplicationController
 
+    def index
+        @team_answers = TeamAnswer.all
+    end
+
     def new
         @team_answer = TeamAnswer.new
         @question = Question.find(params[:question_id])
     end
 
     def create
-        @team_answer = TeamAnswer.new(team_answer_params)
-       
-        # if @team_answer.save
-            
-            redirect_to team_answer_path(@team_answer)
-        # else 
-        #     render :new
-        # end
+        @team_answer = TeamAnswer.create(team_answer_params)
+        redirect_to answers_path
     end
 
     def show
-        @team_answer = TeamAnswer.find_by(params[:id])
+        @team_answer = TeamAnswer.find(params[:id])
     end
 
     private
