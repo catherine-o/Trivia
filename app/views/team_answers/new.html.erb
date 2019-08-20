@@ -3,6 +3,8 @@
         
         <%= f.label :text%>
         <%= f.text_field :text%>
+        <%= f.hidden_field :question_id, value: @question_id %>
+
 
         <%= f.submit "Submit Answer"%>
 

@@ -2,4 +2,5 @@
 
 <p><%= @question.question_text %> <br><br>
 
-<%= link_to "Click to Answer", new_team_answer_path %>
+<%= link_to "Click to Answer", new_team_answer_path(question_id: @question.id) %>
+
