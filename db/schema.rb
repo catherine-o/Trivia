@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_20_162546) do
+ActiveRecord::Schema.define(version: 2019_08_20_191146) do
 
   create_table "answers", force: :cascade do |t|
     t.string "text"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2019_08_20_162546) do
     t.integer "round_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "text"
     t.index ["answer_id"], name: "index_team_answers_on_answer_id"
     t.index ["question_id"], name: "index_team_answers_on_question_id"
     t.index ["round_id"], name: "index_team_answers_on_round_id"

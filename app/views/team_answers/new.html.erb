@@ -1,0 +1,9 @@
+<h1>Enter your answer</h1>
+    <%= form_for @team_answer do |f| %>
+        
+        <%= f.label :text%>
+        <%= f.text_field :text%>
+
+        <%= f.submit "Submit Answer"%>
+
+    <% end %>
