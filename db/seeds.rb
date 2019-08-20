@@ -92,10 +92,21 @@ RoundsQuestion.create(question_id: 18, round: round2)
 RoundsQuestion.create(question_id: 19, round: round2)
 RoundsQuestion.create(question_id: 20, round: round2)
 
+RoundsQuestion.create(question_id: 21, round: round3)
+RoundsQuestion.create(question_id: 22, round: round3)
+RoundsQuestion.create(question_id: 23, round: round3)
+RoundsQuestion.create(question_id: 24, round: round3)
+RoundsQuestion.create(question_id: 25, round: round3)
+RoundsQuestion.create(question_id: 26, round: round3)
+RoundsQuestion.create(question_id: 27, round: round3)
+RoundsQuestion.create(question_id: 28, round: round3)
+RoundsQuestion.create(question_id: 29, round: round3)
+RoundsQuestion.create(question_id: 30, round: round3)
 
 
-byebug
-    0
+
+# byebug
+#     0
 
 
 

@@ -1,4 +1,5 @@
 class Answer < ApplicationRecord
   belongs_to :question
-  has_many :teams, through: :team_answers
+  has_many :teams_answers
+  has_many :teams, through: :teams_answers
 end
