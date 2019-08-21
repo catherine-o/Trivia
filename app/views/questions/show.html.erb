@@ -1,35 +1,37 @@
-<h1>Question:</h1>
-<%byebug %>
+
 
 <% if flash[:msg] %>
   <div class="message"><%= flash[:msg] %></div>
 <% end %>
 
-<h2><%= @question.question_text %></h2><br><br>
+<h1>Question:</h1>
 
-
+<h2>
+  <% q = @question.question_text %>
+  <%= CGI.unescapeHTML(q) %>
+</h2>
+<br>
+<br>
 
 <h4>Answer choices:</h4>
 <ul>
   <% @question.all_answers.shuffle.each do |answer| %>
   <li><%= answer %></li><br>
   <% end %>
-</ul><br><br>
+</ul>
 <h3>Enter your answer</h3>
 <%= form_for @answer do |f| %>
     
-    <%= f.label :text %>
     <%= f.text_field :text %>
   
-
     <%= f.hidden_field :question_id, value: @question.id  %>
 
-
-    <%= f.submit "Submit Answer"%>
+    <%= f.submit "Submit Answer", :class => 'submit' %>
 
 <% end %>
 
-
+<br>
+<br>
  
 <%= link_to "next question", question_path(Question.all.where(category: "#{@question.category}").sample) %>
 <br>

@@ -65,10 +65,6 @@ hard_results_array.each do |result|
 end
 
 
-Team.create(team_name: "Rockets")
-Team.create(team_name: "Nuggets")
-Team.create(team_name: "Programmers")
-
 round1 = Round.create(name: "Entertainment: Music")
 round2 = Round.create(name: "General Knowledge")
 round3 = Round.create(name: "Computer Programming")
