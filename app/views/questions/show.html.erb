@@ -3,29 +3,22 @@
 <h2><%= @question.question_text %></h2><br><br>
 
 
-
 <h3>Enter your answer</h3>
 
+<%= form_for @answer do |f| %>
+    
+    <%= f.label :text %>
+    <%= f.text_field :text %>
 
-    <%= form_for @answer do |f| %>
-        
-        <%= f.label :text %>
-        <%= f.text_field :text %>
-
-        <%= f.hidden_field :question_id, value: @question.id  %>
-
-        <%= f.submit "Submit Answer"%>
-
-    <% end %>
+    <%= f.hidden_field :question_id, value: @question.id  %>
 
 
+    <%= f.submit "Submit Answer"%>
 
-<br>
-<br>
-<%= link_to "next question", question_path(Question.all.sample.id) %>
+<% end %><br>
 
-
-
-
-      
-
+<% if flash[:msg] %>
+  <div class="message"><%= flash[:msg] %></div>
+<% end %><br>
+ 
+<%= link_to "next question",  question_path(Question.all.sample.id) %>
