@@ -1,6 +1,5 @@
 class Round < ApplicationRecord
-    has_many :teams_answers
-    has_many :teams, through: :teams_answers
+    has_many :teams
     has_many :rounds_questions
     has_many :questions, through: :rounds_questions
 

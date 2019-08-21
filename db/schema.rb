@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_21_160237) do
+ActiveRecord::Schema.define(version: 2019_08_21_202952) do
 
   create_table "answers", force: :cascade do |t|
     t.string "text"
@@ -47,26 +47,14 @@ ActiveRecord::Schema.define(version: 2019_08_21_160237) do
     t.index ["round_id"], name: "index_rounds_questions_on_round_id"
   end
 
-  create_table "team_answers", force: :cascade do |t|
-    t.integer "team_id"
-    t.integer "answer_id"
-    t.integer "question_id"
-    t.integer "round_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "text"
-    t.index ["answer_id"], name: "index_team_answers_on_answer_id"
-    t.index ["question_id"], name: "index_team_answers_on_question_id"
-    t.index ["round_id"], name: "index_team_answers_on_round_id"
-    t.index ["team_id"], name: "index_team_answers_on_team_id"
-  end
-
   create_table "teams", force: :cascade do |t|
     t.string "team_name"
     t.integer "correct_answers"
     t.integer "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "round_id"
+    t.index ["round_id"], name: "index_teams_on_round_id"
   end
 
 end

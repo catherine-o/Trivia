@@ -1,0 +1,19 @@
+<h1><%= @round.name %></h1>
+<h3>Create your team:</h3>
+
+<%= form_for @team do |f| %>
+
+    <%= f.text_field :team_name %><br><br>
+
+
+    <%= f.hidden_field :round_id, value: @round.id  %>
+
+
+    <%= f.submit "Start"%>
+
+<% end %>
+
+
+
+
+<%= link_to "Already have a team?", teams_path %>

@@ -8,10 +8,15 @@
 <br>
 <br>
 
-<%= form_for @team do |f| %>
-    
-    <%= f.label :team_name %>
-    <%= f.text_field :team_name %>
+<%= form_for @round do |f| %>
+
+    <%= f.fields_for :team, Team.new do |team_fields| %>
+        <%= team_fields.label :team_name %>
+        <%= team_fields.text_field :team_name %>
+    <% end %>
+
+    <%= f.hidden_field :team_id, value: @team.id%>
 
     <%= f.submit "Create Team" %>
 <% end %>
+
