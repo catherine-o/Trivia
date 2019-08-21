@@ -6,13 +6,14 @@ class AnswersController < ApplicationController
 
     def create
         @answer = Answer.new(answer_params)
+        next_question = Question.all.where(category: "#{@answer.question.category}").sample
         if @answer.valid?
             @answer.save
             if @answer.text == @answer.question.answer
-                redirect_to question_path(Question.all.where(category: "#{@answer.question.category}").sample)
+                redirect_to question_path(next_question)
                 flash[:msg] = "Correct!"
             elsif @answer.text != @answer.question.answer
-                redirect_to question_path(Question.all.where(category: "#{@answer.question.category}").sample)
+                redirect_to question_path(next_question)
                 flash[:msg] = "Wrong!"
             elsif @answer.text == nil
             end
