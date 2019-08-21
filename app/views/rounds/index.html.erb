@@ -1,9 +1,14 @@
-<h1>Choose a Category</h1>
-
+<h1>Welcome to Trivia!</h1>
+<h2>Choose a category:</h2>
 
 <ul>
-    <% @rounds.each do |round| %>
-        <li><%= link_to round.find_categories[0], question_path(round.questions[0]) %></li><br>
-    <% end %>
+<% @rounds.each do |round| %>
+    <li><%= link_to round.name, round_path(round) %></li><br>
+<% end %>
 </ul>
+
+
+
+
+
 

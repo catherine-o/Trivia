@@ -69,9 +69,9 @@ Team.create(team_name: "Rockets")
 Team.create(team_name: "Nuggets")
 Team.create(team_name: "Programmers")
 
-round1 = Round.create(name: "Round 1")
-round2 = Round.create(name: "Round 2")
-round3 = Round.create(name: "Round 3")
+round1 = Round.create(name: "Entertainment: Music")
+round2 = Round.create(name: "General Knowledge")
+round3 = Round.create(name: "Computer Programming")
 
 RoundsQuestion.create(question_id: 1, round: round1)
 RoundsQuestion.create(question_id: 2, round: round1)

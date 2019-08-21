@@ -8,24 +8,21 @@ class TeamsController < ApplicationController
         @team = Team.find(params[:id])
     end
 
-    def new
-        @team = Team.new
-    end
-
     def create 
-        @team = Team.new(team_params)
-        if @team.save
-            redirect_to team_path(@team)
-        else 
-            render :new
-        end
+        @team = Team.create(team_params)
+        # if @team.save
+        # byebug
+            redirect_to question_path(@team.round.questions[0])
+        # else 
+        #     render :new
+        # end
     end
 
 
     private
 
     def team_params
-        params.require(:team).permit(:team_name)
+        params.require(:team).permit(:round_id, :team_name)
     end
 
 end
