@@ -14,7 +14,7 @@ class AnswersController < ApplicationController
                 flash[:msg] = "Correct! You get #{@answer.question.point_value} points!"
             elsif @answer.text.downcase.strip != @answer.question.answer.downcase
                 redirect_to question_path(next_question)
-                flash[:msg] = "Wrong! You get NOTHING!"
+                flash[:msg] = "Wrong! You get NOTHING! The correct answer was #{@answer.question.answer}."
             elsif @answer.text == nil
             end
         end
