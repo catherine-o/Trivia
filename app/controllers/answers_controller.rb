@@ -9,10 +9,10 @@ class AnswersController < ApplicationController
         if @answer.valid?
             @answer.save
             if @answer.text == @answer.question.answer
-                redirect_to question_path(@answer.question)
+                redirect_to question_path(Question.all.where(category: "#{@answer.question.category}").sample)
                 flash[:msg] = "Correct!"
             elsif @answer.text != @answer.question.answer
-                redirect_to question_path(@answer.question)
+                redirect_to question_path(Question.all.where(category: "#{@answer.question.category}").sample)
                 flash[:msg] = "Wrong!"
             elsif @answer.text == nil
             end

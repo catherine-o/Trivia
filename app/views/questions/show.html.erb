@@ -1,5 +1,9 @@
 <h1>Question:</h1>
 
+<% if flash[:msg] %>
+  <div class="message"><%= flash[:msg] %></div>
+<% end %>
+
 <h2><%= @question.question_text %></h2><br><br>
 
 
@@ -17,8 +21,9 @@
 
 <% end %>
 
-<% if flash[:msg] %>
-  <div class="message"><%= flash[:msg] %></div>
-<% end %>
+
  
 <%= link_to "next question", question_path(Question.all.where(category: "#{@question.category}").sample) %>
+<br>
+<br>
+<%= link_to "End the Game.", teams_path %>
