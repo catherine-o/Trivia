@@ -22,9 +22,11 @@ class Question < ApplicationRecord
         all_answers << self.incorrect_answer.split(/[\"|\",\|\"]/)[7]
         all_answers << self.answer
 
+        fixed_answers = []
         all_answers.each do |answer|
-            CGI.unescapeHTML(answer)
+           fixed_answers << CGI.unescapeHTML(answer)
         end
+        fixed_answers
 
     
     
