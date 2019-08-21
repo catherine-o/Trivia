@@ -8,8 +8,14 @@ class AnswersController < ApplicationController
         @answer = Answer.new(answer_params)
         if @answer.valid?
             @answer.save
-            
-          
+            if @answer.text == @answer.question.answer
+                redirect_to question_path(@answer.question)
+                flash[:msg] = "Correct!"
+            elsif @answer.text != @answer.question.answer
+                redirect_to question_path(@answer.question)
+                flash[:msg] = "Wrong!"
+            elsif @answer.text == nil
+            end
         end
     end
 
