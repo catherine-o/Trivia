@@ -22,7 +22,11 @@ class Question < ApplicationRecord
         all_answers << self.incorrect_answer.split(/[\"|\",\|\"]/)[7]
         all_answers << self.answer
 
-        all_answers.shuffle
+        all_answers.each do |answer|
+            CGI.unescapeHTML(answer)
+        end
+
+    
     
     end
     
