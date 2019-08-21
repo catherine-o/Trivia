@@ -6,15 +6,13 @@ class Question < ApplicationRecord
     has_many :teams, through: :teams_answers
     
     
+    def self.categories
+        categories = []
+        self.all.select do |question|
+            categories << question.category
+        end
+        categories
+    end
     
 
 end
-
-
-# <% if @answer.text == @question.answer %>
-#     <h1> Correct!<h1>
-# <% elsif @answer.text != @question.answer %>
-#     <h1> WRONG!<h1>
-# <% else %>
-# <% end %>
-#     

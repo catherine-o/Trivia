@@ -15,10 +15,10 @@
 
     <%= f.submit "Submit Answer"%>
 
-<% end %><br>
+<% end %>
 
 <% if flash[:msg] %>
   <div class="message"><%= flash[:msg] %></div>
-<% end %><br>
+<% end %>
  
-<%= link_to "next question",  question_path(Question.all.sample.id) %>
+<%= link_to "next question", question_path(Question.all.where(category: "#{@question.category}").sample) %>
