@@ -4,8 +4,8 @@
   <div class="message"><%= flash[:msg] %></div>
 <% end %>
 
-<h2><% q = @question.question_text %>
-    <%= CGI.unescapeHTML(q) %></h2><br><br>
+<h2><%= @question.question_text %></h2><br><br>
+
 
 
 <h4>Answer choices:</h4>
