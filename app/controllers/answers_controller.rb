@@ -9,12 +9,12 @@ class AnswersController < ApplicationController
         next_question = Question.all.where(category: "#{@answer.question.category}").sample
         if @answer.valid?
             @answer.save
-            if @answer.text == @answer.question.answer
+            if @answer.text.downcase.strip == @answer.question.answer.downcase
                 redirect_to question_path(next_question)
-                flash[:msg] = "Correct!"
-            elsif @answer.text != @answer.question.answer
+                flash[:msg] = "Correct! You get #{@answer.question.point_value} points!"
+            elsif @answer.text.downcase.strip != @answer.question.answer.downcase
                 redirect_to question_path(next_question)
-                flash[:msg] = "Wrong!"
+                flash[:msg] = "Wrong! You get NOTHING!"
             elsif @answer.text == nil
             end
         end

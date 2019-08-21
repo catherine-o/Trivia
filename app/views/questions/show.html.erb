@@ -7,12 +7,19 @@
 <h2><%= @question.question_text %></h2><br><br>
 
 
-<h3>Enter your answer</h3>
 
+<h4>Answer choices:</h4>
+<ul>
+  <% @question.all_answers.shuffle.each do |answer| %>
+  <li><%= answer %></li><br>
+  <% end %>
+</ul><br><br>
+<h3>Enter your answer</h3>
 <%= form_for @answer do |f| %>
     
     <%= f.label :text %>
     <%= f.text_field :text %>
+  
 
     <%= f.hidden_field :question_id, value: @question.id  %>
 

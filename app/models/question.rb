@@ -13,6 +13,18 @@ class Question < ApplicationRecord
         end
         categories
     end
+
+    def all_answers
+        all_answers = []
+
+        all_answers << self.incorrect_answer.split(/[\"|\",\|\"]/)[1]
+        all_answers << self.incorrect_answer.split(/[\"|\",\|\"]/)[4]
+        all_answers << self.incorrect_answer.split(/[\"|\",\|\"]/)[7]
+        all_answers << self.answer
+
+        all_answers.shuffle
+    
+    end
     
 
 end
