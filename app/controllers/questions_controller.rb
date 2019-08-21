@@ -8,6 +8,9 @@ class QuestionsController < ApplicationController
         @question = Question.find(params[:id])
         @answer = Answer.new
     end
+
+    
+    
  
     
 end
