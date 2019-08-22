@@ -15,6 +15,7 @@ Question.destroy_all
 Answer.destroy_all
 Team.destroy_all
 RoundsQuestion.destroy_all
+Scoreboard.destroy_all
 
 music_base_url = "https://opentdb.com/api.php?amount=40&category=12&type=multiple"
 
@@ -96,12 +97,14 @@ animals_results_array.each do |result|
     )
 end
 
+board1 = Scoreboard.create()
 
-round1 = Round.create(name: "Entertainment: Music")
-round2 = Round.create(name: "General Knowledge")
-round3 = Round.create(name: "Computer Programming")
-round4 = Round.create(name: "Entertainment: Television")
-round5 = Round.create(name: "Geography")
+
+round1 = Round.create(name: "Entertainment: Music", scoreboard: board1)
+round2 = Round.create(name: "General Knowledge", scoreboard: board1)
+round3 = Round.create(name: "Computer Programming", scoreboard: board1)
+round4 = Round.create(name: "Entertainment: Television", scoreboard: board1)
+round5 = Round.create(name: "Geography", scoreboard: board1)
 
 RoundsQuestion.create(question_id: 1, round: round1)
 RoundsQuestion.create(question_id: 2, round: round1)

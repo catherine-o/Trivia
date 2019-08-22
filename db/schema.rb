@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_22_023449) do
+ActiveRecord::Schema.define(version: 2019_08_22_165708) do
 
   create_table "answers", force: :cascade do |t|
     t.string "text"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2019_08_22_023449) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.integer "scoreboard_id"
+    t.index ["scoreboard_id"], name: "index_rounds_on_scoreboard_id"
   end
 
   create_table "rounds_questions", force: :cascade do |t|
@@ -49,6 +51,11 @@ ActiveRecord::Schema.define(version: 2019_08_22_023449) do
     t.index ["round_id"], name: "index_rounds_questions_on_round_id"
   end
 
+  create_table "scoreboards", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "teams", force: :cascade do |t|
     t.string "team_name"
     t.integer "correct_answers"
@@ -56,7 +63,9 @@ ActiveRecord::Schema.define(version: 2019_08_22_023449) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "round_id"
+    t.integer "scoreboard_id"
     t.index ["round_id"], name: "index_teams_on_round_id"
+    t.index ["scoreboard_id"], name: "index_teams_on_scoreboard_id"
   end
 
 end

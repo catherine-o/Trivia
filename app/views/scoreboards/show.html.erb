@@ -1,0 +1,11 @@
+<ul>
+<% @scoreboard.show_team_names.each do |name| %>
+<li><%= name %></li>
+<% end %>
+</ul>
+
+<ul>
+<% @scoreboard.show_team_scores.each do |score| %>
+<li><%= score %> </li>
+<% end %>
+</ul>

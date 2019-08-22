@@ -7,6 +7,7 @@ class RoundsController < ApplicationController
     def show
         @round = Round.find(params[:id])
         @team = Team.new
+        
         # byebug
     end
 

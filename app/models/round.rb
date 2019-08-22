@@ -2,6 +2,7 @@ class Round < ApplicationRecord
     has_many :teams
     has_many :rounds_questions
     has_many :questions, through: :rounds_questions
+    belongs_to :scoreboard
 
 
     def find_categories
