@@ -2,23 +2,15 @@ class Scoreboard < ApplicationRecord
     has_many :teams
     has_many :rounds
 
-
-
-    def show_team_names
-        names = []
-            self.teams.each do |team|
-                names << team.team_name
-            end
-        names
+    def show_all_team_scores
+        namescore = []
+        self.teams.each do |team|
+            namescore << "#{team.team_name}: #{team.score}"
+        end 
+        namescore
     end
 
-    def show_team_scores
-        scores = []
-            self.teams.each do |team|
-                scores << team.score
-            end
-        scores
-    end
+    
 
 
 end
