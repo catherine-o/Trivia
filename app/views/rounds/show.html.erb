@@ -1,4 +1,4 @@
-<h1><%= @round.name %></h1>
+<h1>Category: <%= @round.name %></h1>
 
 <h3>Create your team:</h3>
 
@@ -8,6 +8,7 @@
 
 
     <%= f.hidden_field :round_id, value: @round.id  %>
+    <%= f.hidden_field :score, value: 0  %>
 
 
     <%= f.submit "Start"%>

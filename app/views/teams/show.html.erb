@@ -1,6 +1,10 @@
-<h1>Welcome to Trivia, <%= @team.team_name %></h1>
+<h1>Teeeeaaaaam <%= @team.team_name %>!!!</h1>
+<% @@team = @team.team_name %>
 
-<h2>Let's get ready to rrrummbllleeeee!</h2>
+<%# <h2>Let's get ready to rrrummbllleeeee!</h2> %>
 
-<%= link_to "Continue Game", question_path(@team.round.questions.sample) %>
+<p>Your current score is <%= @team.score %></p>
+
+
+<%= render 'teams/question' %>
 
