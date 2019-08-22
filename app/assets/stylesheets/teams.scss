@@ -1,3 +1,37 @@
 // Place all the styles related to the Teams controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.team {
+
+    
+}
+
+.score {
+    display: flex;
+    border: 2px solid;
+    padding: 5px;
+    font-size: 20px;
+    
+}
+
+.choices{
+    display: flex;
+    padding: 5px;
+}
+
+.answer-form{
+    display: flex;
+    padding: 5px;
+
+
+}
+
+.game {
+    display: flex;
+    margin: 5px;
+}
+
+input {
+    column-span: all
+}

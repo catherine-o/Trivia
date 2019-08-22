@@ -14,23 +14,28 @@
 <br>
 <br>
 
-<h4>Answer choices:</h4>
-<ul>
-  <% random.all_answers.shuffle.each do |answer| %>
-  <li><%= answer %></li><br>
-  <% end %>
-</ul>
-<h3>Enter your answer</h3>
+
+<container class = "answer-form">
+
 <%= form_for @answer do |f| %>
-    
-    <%= f.text_field :text %>
   
-    <%= f.hidden_field :team_id, value: @team.id  %>
-    <%= f.hidden_field :question_id, value: random.id  %>
+  <% random.all_answers.shuffle.each do |answer| %>
 
-    <%= f.submit "Submit Answer", :class => 'submit' %>
+    <ul>
+    <li class="answers">
+    <%= f.radio_button :text, answer, {style:"display:inline"} %>
+    <%= f.label :text, answer %>
+    </li>
+    </ul>
 
+  <% end %>
+   
+  
+  <%= f.hidden_field :team_id, value: @team.id  %>
+  <%= f.hidden_field :question_id, value: random.id  %>
+  <%= f.submit "Submit Answer", :class => 'submit' %>
 <% end %>
+</container>
 
 
 <br>
