@@ -1,9 +1,14 @@
 <h1>Welcome to Trivia!</h1>
+
+<% if flash[:msg] %>
+  <div class="message"><%= flash[:msg] %></div>
+<% end %>
+
 <h2>Choose a category:</h2>
 
 <ul>
 <% @rounds.each do |round| %>
-    <li><%= link_to round.name, round_path(round) %></li><br>
+    <li><%= link_to round.name, round_path(round.id) %></li><br>
 <% end %>
 </ul>
 
