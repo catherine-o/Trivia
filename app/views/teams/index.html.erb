@@ -1,8 +1,8 @@
-<h1>Which game were you playing?</h1>
+<h1>Select your team!</h1>
 
 <% @teams.each do |team| %>
     <%= link_to team.team_name, team_path(team) %><br>
 <% end %>
 <br>
 <br>
-<%= link_to "Start Over", rounds_path %>
+<%= link_to "Start New Game", rounds_path %>

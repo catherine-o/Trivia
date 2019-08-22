@@ -36,4 +36,4 @@
 <%= link_to "next question", question_path(Question.all.where(category: "#{@question.category}").sample) %>
 <br>
 <br>
-<%= link_to "End the Game.", rounds_path %>
+<%= link_to "End the Game.", teams_path %>
