@@ -1,6 +1,69 @@
+<h3>Current Stats:</h3>
 <p>
-<% @scoreboard.show_all_team_scores.each do |teamscore| %>
+<% @scoreboard.all_team_names_and_scores.each do |teamscore| %>
 <%= teamscore %>
 <br>
 <% end %>
 </p>
+
+<h4>In first place:</h4>
+<p>Team <%= @scoreboard.winner %>!!!!! 😄</p>
+
+
+<h4>At the Bottom of the Barrel:</h4>
+<p>Team <%= @scoreboard.loser %>!!!!! 😢</p>
+<br>
+
+<h3>By Category:</h3>
+
+<h4>Entertainment: Music</h4>
+    <% if @scoreboard.music_loser == @scoreboard.music_winner %>
+        <h5><%= @scoreboard.music_winner %>, you have no competitors yet...<br>
+        but you're in the lead!</h5>
+    <% elsif @scoreboard.music_loser != @scoreboard.music_winner %>
+        <h5>Leading: <%= @scoreboard.music_winner %></h5>
+        <h5>Trailing: <%= @scoreboard.music_loser %></h5>
+    <% end %>
+<h5>Average Score: <%= @scoreboard.music_average_score %></h5>
+
+
+<h4>General Knowledge</h4>
+    <% if @scoreboard.general_loser == @scoreboard.general_winner %>
+        <h5><%= @scoreboard.general_winner %>, you have no competitors yet...<br>
+        but you're in the lead!</h5>
+    <% elsif @scoreboard.general_loser != @scoreboard.general_winner %>
+        <h5>Leading: <%= @scoreboard.general_winner %></h5>
+        <h5>Trailing: <%= @scoreboard.general_loser %></h5>
+    <% end %>
+<h5>Average Score: <%= @scoreboard.general_average_score %></h5>
+
+<h4>Computer Programming</h4>
+    <% if @scoreboard.computer_loser == @scoreboard.computer_winner %>
+        <h5><%= @scoreboard.computer_winner %>, you have no competitors yet...<br>
+        but you're in the lead!</h5>
+    <% elsif @scoreboard.computer_loser != @scoreboard.computer_winner %>
+        <h5>Leading: <%= @scoreboard.computer_winner %></h5>
+        <h5>Trailing: <%= @scoreboard.computer_loser %></h5>
+    <% end %>
+<h5>Average Score: <%= @scoreboard.computer_average_score %></h5>
+
+
+<h4>Entertainment: Television</h4>
+    <% if @scoreboard.tv_loser == @scoreboard.tv_winner %>
+        <h5><%= @scoreboard.tv_winner %>, you have no competitors yet...<br>
+        but you're in the lead!</h5>
+    <% elsif @scoreboard.tv_loser != @scoreboard.tv_winner %>
+        <h5>Leading: <%= @scoreboard.tv_winner %></h5>
+        <h5>Trailing: <%= @scoreboard.tv_loser %></h5>
+    <% end %>
+<h5>Average Score: <%= @scoreboard.tv_average_score %></h5>
+
+<h4>Geography</h4>
+    <% if @scoreboard.geo_loser == @scoreboard.geo_winner %>
+        <h5><%= @scoreboard.geo_winner %>, you have no competitors yet...<br>
+        but you're in the lead!</h5>
+    <% elsif @scoreboard.geo_loser != @scoreboard.geo_winner %>
+        <h5>Leading: <%= @scoreboard.geo_winner %></h5>
+        <h5>Trailing: <%= @scoreboard.geo_loser %></h5>
+    <% end %>
+<h5>Average Score: <%= @scoreboard.geo_average_score %> </h5>
