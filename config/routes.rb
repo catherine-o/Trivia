@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :scoreboards
   resources :rounds_questions
   resources :team_answers
   resources :rounds
