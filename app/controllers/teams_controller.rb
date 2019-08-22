@@ -6,6 +6,7 @@ class TeamsController < ApplicationController
 
     def show
         @team = Team.find(params[:id])
+        @answer = Answer.new
     end
 
     def create 
@@ -25,7 +26,7 @@ class TeamsController < ApplicationController
     private
 
     def team_params
-        params.require(:team).permit(:round_id, :team_name)
+        params.require(:team).permit(:round_id, :team_name, :score)
     end
 
 end

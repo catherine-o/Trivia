@@ -7,7 +7,8 @@
 <h1>Ok here is your question:</h1>
 
 <h2>
-  <% q = @question.question_text %>
+  <% random = @team.round.questions.sample %>
+  <% q = random.question_text %>
   <%= CGI.unescapeHTML(q) %>
 </h2>
 <br>
@@ -15,7 +16,7 @@
 
 <h4>Answer choices:</h4>
 <ul>
-  <% @question.all_answers.shuffle.each do |answer| %>
+  <% random.all_answers.shuffle.each do |answer| %>
   <li><%= answer %></li><br>
   <% end %>
 </ul>
@@ -24,7 +25,8 @@
     
     <%= f.text_field :text %>
   
-    <%= f.hidden_field :question_id, value: @question.id  %>
+    <%= f.hidden_field :team_id, value: @team.id  %>
+    <%= f.hidden_field :question_id, value: random.id  %>
 
     <%= f.submit "Submit Answer", :class => 'submit' %>
 
@@ -33,7 +35,7 @@
 <br>
 <br>
  
-<%= link_to "next question", question_path(Question.all.where(category: "#{@question.category}").sample) %>
+<%= link_to "next question", team_path(@team) %>
 <br>
 <br>
 <%= link_to "End the Game.", teams_path %>
