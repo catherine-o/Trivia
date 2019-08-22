@@ -9,6 +9,10 @@ class TeamsController < ApplicationController
         @answer = Answer.new
     end
 
+    def new
+        @team = Team.new
+    end
+
     def create 
         @team = Team.create(team_params)
         if @team.save

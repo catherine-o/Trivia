@@ -312,7 +312,16 @@ RoundsQuestion.create(question_id: 199, round: round5)
 RoundsQuestion.create(question_id: 200, round: round5)
 
 
-
+Team.create(team_name: "Pythons", score: 24, round: round1, scoreboard: board1)
+Team.create(team_name: "Pirates", score: 21, round: round1, scoreboard: board1)
+Team.create(team_name: "Orange People", score: 2, round: round2, scoreboard: board1)
+Team.create(team_name: "Jelly Beans", score: -7, round: round2, scoreboard: board1)
+Team.create(team_name: "Yogurts", score: 13, round: round3, scoreboard: board1)
+Team.create(team_name: "Markers", score: 30, round: round3, scoreboard: board1)
+Team.create(team_name: "Little Cat", score: 4, round: round4, scoreboard: board1)
+Team.create(team_name: "1 Person", score: 9, round: round4, scoreboard: board1)
+Team.create(team_name: "I'm Cold", score: 12, round: round5, scoreboard: board1)
+Team.create(team_name: "whoru", score: -2, round: round5, scoreboard: board1)
 
 
 
