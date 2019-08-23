@@ -45,7 +45,7 @@
 
 <br>
 <div class="foot">
-
+<%= link_to "Change Team Name", edit_team_path(@team)%>
 <%= link_to "Scoreboard", scoreboard_path(@team.round.scoreboard)%>
 <%= link_to "End Game", teams_path %>
 </div>
