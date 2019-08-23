@@ -1,16 +1,21 @@
 
+<container class="all-page">
+  <% if flash[:msg] %>
+    <div class="message"><%= flash[:msg] %></div>
+  <% end %>
 
-<% if flash[:msg] %>
-  <div class="message"><%= flash[:msg] %></div>
-<% end %>
+  <h2>Choose a category:</h2>
 
-<h2>Choose a category:</h2>
-
-<ul>
-<% @rounds.each do |round| %>
-    <li><%= link_to round.name, round_path(round.id) %></li><br>
-<% end %>
-</ul>
+  <%# <container class="categories"> %>
+    <ul>
+    <% @rounds.each do |round| %>
+      <span class="each-category">
+          <li><%= link_to round.name, round_path(round.id) %></li><br>
+      </span>
+    <% end %>
+    </ul>
+  <%# </container> %>
+</container>
 
 
 

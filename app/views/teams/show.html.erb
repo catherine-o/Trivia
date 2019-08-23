@@ -2,15 +2,18 @@
     <%= stylesheet_link_tag '/teams.scss'%>
 </head>
 
-<h1 class="team">Teeeeaaaaam <%= @team.team_name %>!!!</h1>
-<% @@team = @team.team_name %>
+<container class="page">
 
-<%# <h2>Let's get ready to rrrummbllleeeee!</h2> %>
+    <h1 class="team">Teeeeaaaaam <%= @team.team_name %>!!!</h1>
+    <% @@team = @team.team_name %>
 
-<p class="score">Your current score is <%= @team.score %></p>
+    <%# <h2>Let's get ready to rrrummbllleeeee!</h2> %>
+
+    <p class="score">Your current score is <%= @team.score %></p>
 
 
-<%= render 'teams/question' %>
+    <%= render 'teams/question' %>
+</container>
 
 
 

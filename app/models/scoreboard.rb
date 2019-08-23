@@ -47,7 +47,7 @@ class Scoreboard < ApplicationRecord
 
     def music_average_score
         teams = self.teams.where(round_id: 1)
-        teams.average(:score).to_f
+        teams.average(:score).to_f.round(1)
     end
     
     def general_winner
@@ -66,7 +66,7 @@ class Scoreboard < ApplicationRecord
 
     def general_average_score
         teams = self.teams.where(round_id: 2)
-        teams.average(:score).to_f
+        teams.average(:score).to_f.round(1)
     end
     
     def computer_winner
@@ -85,7 +85,7 @@ class Scoreboard < ApplicationRecord
     
     def computer_average_score
         teams = self.teams.where(round_id: 3)
-        teams.average(:score).to_f
+        teams.average(:score).to_f.round(1)
     end
 
     def tv_winner
@@ -104,7 +104,7 @@ class Scoreboard < ApplicationRecord
 
     def tv_average_score
         teams = self.teams.where(round_id: 4)
-        teams.average(:score).to_f
+        teams.average(:score).to_f.round(1)
     end
    
     def geo_winner
@@ -123,7 +123,7 @@ class Scoreboard < ApplicationRecord
 
     def geo_average_score
         teams = self.teams.where(round_id: 5)
-        teams.average(:score).to_f
+        teams.average(:score).to_f.round(1)
     end
 
 end

@@ -4,7 +4,7 @@
 
 
 .page {
-    padding: 50px 80px 80px 100px;
+    padding: 80px 80px 80px 80px;
 }
 
 .teams {
@@ -14,7 +14,7 @@
     align-content: space-between;
     justify-content: space-evenly;
     border-style: solid;
-    background-color:  rgba(134, 169, 202, 0.788);
+    background-color:  rgb(171, 208, 250);
     // max-width: 70%;
     padding: 100px 200px 100px 200px;
 }
@@ -35,7 +35,7 @@
 .answer-form{
     display: flex;
     justify-content: space-evenly;
-    padding: 5px;
+    padding: 15px;
     width: 80%;
     margin: auto;
     list-style: none;
@@ -44,7 +44,7 @@
     box-shadow: 2px 2px 4px #49A0B2;
     align-items: center;
     width: 80%;
-    background-color: rgb(171, 245, 250);
+    background-color: rgb(171, 208, 250);
 
 }
 

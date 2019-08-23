@@ -37,7 +37,7 @@ a:visited{
 }
 
 a:hover{
-    color: #B2454B;
+    color: rgb(92, 45, 202);
 }
 
 a:link{
@@ -69,7 +69,7 @@ h1.trivia-title {
     border: 2px solid;
     margin: 20px;
     padding: 15px 40px;
-    background-color: rgba(134, 169, 202, 0.788);
+    background-color: rgb(171, 208, 250);
   
 }
 
