@@ -83,7 +83,7 @@ input {
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 4px;
-    background-color: lightgray;
+   
 }
 
 .submit {
@@ -93,8 +93,31 @@ input {
     border: 2px solid black;
     border-radius: 4px;
     background-color: rgb(233, 237, 243);
+    box-shadow: 2px 2px 4px rgb(105, 107, 117);
     cursor: pointer;
-    box-shadow: 2px 2px 4px rgb(155, 157, 168);
+    
+}
+
+.submit:hover {
+    box-shadow: 0px 0px 0px rgb(105, 107, 117);
+    transition-duration: .5s;
+}
+
+.team-submit {
+    text-align: center;
+    width: auto;
+    
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: rgb(233, 237, 243);
+    box-shadow: 2px 2px 4px rgb(105, 107, 117);
+    cursor: pointer;
+    
+}
+
+.team-submit:hover {
+    box-shadow: 0px 0px 0px rgb(105, 107, 117);
+    transition-duration: .5s;
 }
 
 .wrong-message {
