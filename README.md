@@ -16,7 +16,7 @@
 Trivia Time is a Ruby on Rails application that allows users to choose a category of questions, create a team name, accrue points and view where they stand against other teams on a scoreboard. Play a round to test your wits!
 
 ## Intro Video
-[Trivia Time on YouTube](https://www.youtube.com)
+[Trivia Time on YouTube](https://www.youtube.com/watch?v=Gq7AQbAOsg8)
 
 ## Technologies
 * Rails - version 5.2.3
