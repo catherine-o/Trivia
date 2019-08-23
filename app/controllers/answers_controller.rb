@@ -12,11 +12,11 @@ class AnswersController < ApplicationController
             if @answer.text.downcase.strip == @answer.question.answer.downcase
                 redirect_to team_path(@answer.team)
                 @answer.team.increment!('score', @answer.question.point_value)
-                flash[:msg] = "Correct! You get #{@answer.question.point_value} points!"
+                flash[:correct] = "Correct! You get #{@answer.question.point_value} points!"
             elsif @answer.text.downcase.strip != @answer.question.answer.downcase
                 redirect_to team_path(@answer.team)
-                @answer.team.update_attribute('score', @answer.team.score-@answer.question.point_value)
-                flash[:msg] = "Wrong! You lose #{@answer.question.point_value} points! The correct answer was #{@answer.question.answer}."
+                @answer.team.update_attribute('score', @answer.team.score-5)
+                flash[:wrong] = "Wrong! You lose 5 points! The correct answer was #{@answer.question.answer}."
             end
             
         else

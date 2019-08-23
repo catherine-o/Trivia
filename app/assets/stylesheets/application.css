@@ -17,20 +17,23 @@
  /* red: #b2454b  */
 /* lightblue #a8eoff */
 
+body{
+    background-color: rgb(47, 47, 53)
+}
 
-
-body {
-    background-color: #A8E0FF;
+.frame {
+    display:flex;
+    flex-direction: column;
     font-family: Arial, Helvetica, sans-serif; 
-    margin: 20px; 
-    
-    border: 5px solid black;
-    padding:15px;
+    margin: auto; 
+    border: 10px solid black;
+    padding:5px;
     border-radius: 5px;
+    background-color:rgb(224, 231, 235)
 
 }
 a:visited{
-    color: #4A78B5;
+    color: #1D2633;
 }
 
 a:hover{
@@ -66,6 +69,7 @@ h1.trivia-title {
     border: 2px solid;
     margin: 20px;
     padding: 15px 40px;
+    background-color: rgb(113, 148, 177);
   
 }
 
@@ -82,15 +86,41 @@ input {
 }
 .submit {
     text-align: center;
-    width: 125px;
+    width: auto;
+    margin: auto;
     border: 2px solid black;
     border-radius: 4px;
     background-color: darkgray;
     cursor: pointer;
 }
 
-.message {
-    background-color: #B2454B;
+.wrong-message {
+    background-color: rgb(146, 59, 88);
+    font-size: 20pt;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 5px;
+    border: 2px solid;
+    margin: 20px;
+    padding: 10px;
+}
+
+.correct-message {
+    background-color: rgb(103, 201, 103);
+    font-size: 20pt;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-style: double;
+    border-radius: 5px;
+    border: 2px solid;
+    margin: 20px;
+    padding: 10px;
+}
+.no-message {
+    background-color: orange;
     font-size: 20pt;
     display: flex;
     justify-content: center;

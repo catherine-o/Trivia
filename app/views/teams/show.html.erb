@@ -1,5 +1,5 @@
 <head>
-<%= stylesheet_link_tag '/teams.scss'%>
+    <%= stylesheet_link_tag '/teams.scss'%>
 </head>
 
 <h1 class="team">Teeeeaaaaam <%= @team.team_name %>!!!</h1>
@@ -12,5 +12,5 @@
 
 <%= render 'teams/question' %>
 
-<%= link_to "Scoreboard", scoreboard_path(@team.round.scoreboard)%>
+
 

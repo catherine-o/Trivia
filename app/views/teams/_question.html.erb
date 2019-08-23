@@ -1,7 +1,13 @@
 
 
+<% if flash[:correct] %>
+  <div class="correct-message"><%= flash[:correct] %></div>
+<% end %>
+<% if flash[:wrong] %>
+  <div class="wrong-message"><%= flash[:wrong] %></div>
+<% end %>
 <% if flash[:msg] %>
-  <div class="message"><%= flash[:msg] %></div>
+  <div class="no-message"><%= flash[:msg] %></div>
 <% end %>
 
 <h1>Ok here is your question:</h1>
@@ -21,12 +27,11 @@
   
   <% random.all_answers.shuffle.each do |answer| %>
 
-    <ul>
+    <ol>
     <li class="answers">
     <%= f.radio_button :text, answer, {style:"display:inline"} %>
     <%= f.label :text, answer %>
-    </li>
-    </ul>
+    </ol>
 
   <% end %>
    
@@ -39,5 +44,7 @@
 
 
 <br>
-<br>
-<%= link_to "End the Game.", teams_path %>
+<div class="foot">
+<%= link_to "End Game", teams_path %>
+<%= link_to "Scoreboard", scoreboard_path(@team.round.scoreboard)%>
+</div>
