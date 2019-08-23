@@ -15,9 +15,12 @@
     border-style: solid;
     border-radius: 4px;
     background-color:  rgb(171, 208, 250);
+    opacity: 0.92;
     max-width: 80%;
     padding: 40px 30px;
     box-shadow: 2px 2px 4px rgb(155, 157, 168);
+    // background-image: linear-gradient(to bottom right, rgb(211, 244, 250), rgb(255, 255, 255));
+    // opacity: 0.85
 }
 
 .each-team {
@@ -34,6 +37,8 @@
     background-color: #A8E0FF;
     margin: 5px;
     box-shadow: 2px 2px 4px rgb(155, 157, 168);
+    // background-image: linear-gradient(to bottom right, rgb(211, 231, 250), rgb(255, 255, 255));
+    // opacity: 0.85;
 }
 
 
@@ -50,7 +55,7 @@
     align-items: center;
     width: 80%;
     background-color: rgb(185, 203, 241);
-
+    opacity: 0.95;
 }
 
 .answers{
@@ -80,7 +85,7 @@
     margin: 10px;
     align-content: stretch;
     background-color: #A8E0FF;
-
+    opacity: 0.90;
 
 
 }
