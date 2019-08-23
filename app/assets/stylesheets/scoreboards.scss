@@ -25,11 +25,11 @@
     max-width: 50%;
 }
 
-.top-row {
-    display: flex;
-    justify-content: space-around;
+// .top-row {
+//     display: flex;
+//     justify-content: space-around;
     
-}
+// }
 
 .all-scores {
     display: flex;
@@ -43,7 +43,15 @@
 }
 
 .score {
-
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-between;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #A8E0FF;
+    // margin: auto;
 }
 
 .bullets {

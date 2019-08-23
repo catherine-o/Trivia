@@ -39,7 +39,7 @@
     <container class="categories">
 
         <div class="music-box">
-            <h4>Entertainment: Music</h4>
+            <h4><u>Entertainment: Music</u></h4>
                 <% if @scoreboard.music_loser == @scoreboard.music_winner %>
                     <h5><%= @scoreboard.music_winner %>, you have no competitors yet...<br>
                     but you're in the lead!</h5>
@@ -52,7 +52,7 @@
 
 
         <div class="general-box">
-            <h4>General Knowledge</h4>
+            <h4><u>General Knowledge</u></h4>
                 <% if @scoreboard.general_loser == @scoreboard.general_winner %>
                     <h5><%= @scoreboard.general_winner %>, you have no competitors yet...<br>
                     but you're in the lead!</h5>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="computer-box">
-            <h4>Computer Programming</h4>
+            <h4><u>Computer Programming</u></h4>
                 <% if @scoreboard.computer_loser == @scoreboard.computer_winner %>
                     <h5><%= @scoreboard.computer_winner %>, you have no competitors yet...<br>
                     but you're in the lead!</h5>
@@ -76,7 +76,7 @@
         </div>
 
         <div class="tv-box">
-            <h4>Entertainment: Television</h4>
+            <h4><u>Entertainment: Television</u></h4>
                 <% if @scoreboard.tv_loser == @scoreboard.tv_winner %>
                     <h5><%= @scoreboard.tv_winner %>, you have no competitors yet...<br>
                     but you're in the lead!</h5>
@@ -88,7 +88,7 @@
         </div>
 
         <div class="geo-box">
-            <h4>Geography</h4>
+            <h4><u>Geography</u></h4>
                 <% if @scoreboard.geo_loser == @scoreboard.geo_winner %>
                     <h5><%= @scoreboard.geo_winner %>, you have no competitors yet...<br>
                     but you're in the lead!</h5>
