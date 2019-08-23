@@ -85,4 +85,4 @@ Created by [Catherine O'Hara](www.linkedin.com/in/catherine-o) and [Rob Ballanty
 Feel free to contact us!
 
 ## License
-[Click to view](https://github.com/stein0209/TacoLandia/blob/master/License.txt)
+[Click to view](https://github.com/catherine-o/Trivia/blob/master/LICENSE)
