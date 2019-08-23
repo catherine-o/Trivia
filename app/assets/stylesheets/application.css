@@ -17,6 +17,9 @@
  /* red: #b2454b  */
 /* lightblue #a8eoff */
 
+
+
+
 .page {
     align-content: center;
     padding: 40px 40px;
@@ -34,7 +37,15 @@ body{
     border: 10px solid black;
     padding:5px;
     border-radius: 5px;
-    background-color:rgb(236, 245, 250)
+    background-color:rgb(255, 255, 255);
+    background-image: url(https://tinyurl.com/y4pfw77b);
+    /* background-size: cover; */
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.frame::after {
 
 }
 a:visited{
