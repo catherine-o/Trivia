@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/', to: 'teams#index'
+  
   resources :scoreboards
   resources :rounds_questions
   resources :team_answers
