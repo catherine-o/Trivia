@@ -31,7 +31,7 @@ rails db:{create,migrate,seed}
 
 rails s
 ```
-Then open your browser (preferably Chrome) and go to http://localhost:3000/teams to begin.
+Then open your browser (preferably Chrome) and go to http://localhost:3000 to begin.
 
 ## Code Examples
 ```ruby
