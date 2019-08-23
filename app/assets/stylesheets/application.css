@@ -17,6 +17,11 @@
  /* red: #b2454b  */
 /* lightblue #a8eoff */
 
+.page {
+    align-content: center;
+    padding: 80px, 80px;
+}
+
 body{
     background-color: rgb(47, 47, 53)
 }
