@@ -70,7 +70,7 @@ h1.trivia-title {
     margin: 20px;
     padding: 15px 40px;
     background-color: rgb(171, 208, 250);
-  
+    box-shadow: 2px 2px 4px rgb(155, 157, 168);
 }
 
 input {
@@ -82,16 +82,17 @@ input {
     border: 2px solid black;
     border-radius: 4px;
     background-color: lightgray;
-    
 }
+
 .submit {
     text-align: center;
     width: auto;
     margin: auto;
     border: 2px solid black;
     border-radius: 4px;
-    background-color: darkgray;
+    background-color: rgb(233, 237, 243);
     cursor: pointer;
+    box-shadow: 2px 2px 4px rgb(155, 157, 168);
 }
 
 .wrong-message {

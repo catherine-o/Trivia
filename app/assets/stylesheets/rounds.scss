@@ -26,7 +26,37 @@
     border-radius: 5px;
     padding: 30px;
     font-size: 20px;
-    background-color: #A8E0FF;
+    background-color:    #A8E0FF;
     margin: auto;
     list-style: none;
+    box-shadow: 2px 2px 4px rgb(155, 157, 168);
+}
+
+.team-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    // align-content: space-between;
+    justify-content: space-evenly;
+    border-style: solid;
+    background-color:  rgb(171, 208, 250);
+    // max-width: 70%;
+    padding: 100px 200px 100px 200px;
+}
+
+input {
+    display: flex;
+    width: 500px;
+    padding: 6px 30px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: lightgray;
+    text-align: center;
+}
+
+#team_team_name {
+    width: 400px;
+    box-shadow: 2px 2px 4px rgb(155, 157, 168);
 }
