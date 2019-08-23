@@ -39,15 +39,14 @@ body{
     border-radius: 5px;
     background-color:rgb(255, 255, 255);
     background-image: url(https://tinyurl.com/y4pfw77b);
+    /* background-image: url(https://tinyurl.com/yxs3qyud); */
     /* background-size: cover; */
     background-position: right;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-.frame::after {
 
-}
 a:visited{
     color: #1D2633;
 }
@@ -90,6 +89,7 @@ h1.trivia-title {
     padding: 15px 40px;
     background-color: rgb(171, 208, 250);
     box-shadow: 2px 2px 4px rgb(155, 157, 168);
+    opacity: 0.92;
 }
 
 input {
