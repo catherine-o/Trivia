@@ -321,7 +321,7 @@ Team.create(team_name: "Markers", score: 30, round: round3, scoreboard: board1)
 Team.create(team_name: "Little Cat", score: 4, round: round4, scoreboard: board1)
 Team.create(team_name: "1 Person", score: 9, round: round4, scoreboard: board1)
 Team.create(team_name: "I'm Cold", score: 12, round: round5, scoreboard: board1)
-Team.create(team_name: "whoru", score: -2, round: round5, scoreboard: board1)
+Team.create(team_name: "who R u", score: -2, round: round5, scoreboard: board1)
 
 
 
