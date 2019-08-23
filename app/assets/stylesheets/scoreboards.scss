@@ -46,7 +46,7 @@
 .score {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
+    justify-content: center;
     // align-content: space-between;
     border: 2px solid;
     border-radius: 5px;
@@ -55,6 +55,8 @@
     background-color: #A8E0FF;
     margin: 10px;
 }
+
+
 
 .bullets {
     list-style: none;
