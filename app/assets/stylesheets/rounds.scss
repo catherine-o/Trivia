@@ -19,6 +19,7 @@
 // }
 
 .each-category {
+    // font-size: 30px;
     display: flex;
     justify-content: center;
     // align-content: center;
@@ -27,11 +28,13 @@
     padding: 30px;
     font-size: 20px;
     background-color:    #A8E0FF;
-    margin: auto;
+    margin: 10px;
     list-style: none;
     box-shadow: 2px 2px 4px rgb(155, 157, 168);
 }
-
+.each-category a {
+    font-size: 30px;
+}
 .team-form {
     display: flex;
     flex-wrap: wrap;
