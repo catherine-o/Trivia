@@ -9,22 +9,41 @@
 
 .score {
     display: flex;
+    justify-content: space-evenly;
     border: 2px solid;
+    border-radius: 5px;
     padding: 5px;
     font-size: 20px;
+    background-color: #A8E0FF;
     
-}
-
-.choices{
-    display: flex;
-    padding: 5px;
 }
 
 .answer-form{
     display: flex;
+    justify-content: space-evenly;
     padding: 5px;
+    width: 80%;
+    margin: auto;
+    list-style: none;
+    border: 2px solid;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px #49A0B2;
+    align-items: center;
+    width: 80%;
+    background-color: rgb(171, 245, 250);
 
+}
 
+.answers{
+    list-style: none;
+    width: auto;
+}
+
+.new_answer{
+    align-content: center;
+
+    width: 300px;
+    margin: auto;
 }
 
 .game {
@@ -32,6 +51,18 @@
     margin: 5px;
 }
 
-input {
-    column-span: all
+
+.foot {
+
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 10px;
+    align-content: stretch;
+    background-color: #A8E0FF;
+
+
+
 }
