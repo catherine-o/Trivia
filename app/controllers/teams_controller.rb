@@ -26,6 +26,18 @@ class TeamsController < ApplicationController
         end
     end
 
+    def update
+        @team = Team.find(params[:id])
+        @team.update
+        if @team.save
+                redirect_to team_path(@team)
+            else 
+                redirect_to rounds_path
+                flash[:msg] = "Sorry that name is already taken."
+    
+            end
+    end
+
 
     private
 
