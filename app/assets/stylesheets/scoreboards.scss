@@ -1,3 +1,92 @@
 // Place all the styles related to the Scoreboards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//flexbox
+.whole-page {
+    margin: 50px;
+}
+
+// flexbox
+.top-box {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+// flexbox
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    align-content: stretch;
+    justify-content: space-evenly;
+    border-style: solid;
+    background-color:  rgb(171, 208, 250);
+    max-width: 50%;
+    box-shadow: 2px 2px 4px rgb(155, 157, 168);
+}
+
+// .top-row {
+//     display: flex;
+//     justify-content: space-around;
+    
+// }
+
+.all-scores {
+    display: flex;
+    // background-color: white;
+    // flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 60px 130px 50px 100px;
+    // max-width: 50%;
+    align-content: stretch;
+}
+
+.score {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-between;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #A8E0FF;
+    // margin: auto;
+}
+
+.bullets {
+    list-style: none;
+}
+
+.each-score {
+    flex-grow: 3
+}
+
+//flexbox
+// .first-last {
+//     flex-direction: column;
+//     justify-content: space-between;
+// }
+
+#happy-gif {
+    max-width: 800px;
+}
+
+#sad-gif {
+    max-width: 1000px;
+}
+
+
+.last-place {
+
+}
+
+
+// flexbox
+.categories {
+    display: flex;
+    border-style: groove;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

@@ -1,23 +1,26 @@
-<h1>Category: <%= @round.name %></h1>
+<container class="all-page">
+    <h1>Category: <%= @round.name %></h1>
+    <br><br>
 
-<h3>Create your team:</h3>
+    <h3>Create your team:</h3>
 
-<%= form_for @team do |f| %>
+    <%= form_for @team do |f| %>
 
-    <%= f.text_field :team_name %><br><br>
-
-
-    <%= f.hidden_field :round_id, value: @round.id  %>
-    <%= f.hidden_field :score, value: 0  %>
-    <%= f.hidden_field :scoreboard_id, value: @round.scoreboard_id %>
-    
+        <%= f.text_field :team_name %><br><br>
 
 
-    <%= f.submit "Start"%>
+        <%= f.hidden_field :round_id, value: @round.id  %>
+        <%= f.hidden_field :score, value: 0  %>
+        <%= f.hidden_field :scoreboard_id, value: @round.scoreboard_id %>
+        
 
-<% end %>
+
+        <%= f.submit "Start"%>
+
+    <% end %>
 
 
+    <br><br><br><br><br><br><br><br><br>
 
-
-<%= link_to "Continue a saved game.", teams_path %>
+    <%= link_to "Continue a saved game.", teams_path %>
+</container>

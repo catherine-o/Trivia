@@ -1,9 +1,17 @@
-<h1>Welcome to Trivia!</h1>
-<h2>Select your team!</h2>
+<container class="page">
+    <h1>Welcome to Trivia!</h1>
+    <h2>Select your team!</h2>
 
-<% @teams.each do |team| %>
-    <%= link_to team.team_name, team_path(team) %><br>
-<% end %>
-<br>
-<br>
-<%= link_to "Start New Game", rounds_path %>
+    <container class="teams">
+        <% @teams.each do |team| %>
+            <span class="each-team">
+                <%= link_to team.team_name, team_path(team) %>
+            </span>
+        <% end %>
+        <br>
+        <br>
+    </container>
+    <br><br><br><br>
+
+    <%= link_to "Create New Team", rounds_path %>
+</container>

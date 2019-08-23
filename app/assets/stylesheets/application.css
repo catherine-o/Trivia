@@ -29,7 +29,7 @@ body{
     border: 10px solid black;
     padding:5px;
     border-radius: 5px;
-    background-color:rgb(224, 231, 235)
+    background-color:rgb(236, 245, 250)
 
 }
 a:visited{
@@ -37,7 +37,7 @@ a:visited{
 }
 
 a:hover{
-    color: #B2454B;
+    color: rgb(92, 45, 202);
 }
 
 a:link{
@@ -69,8 +69,8 @@ h1.trivia-title {
     border: 2px solid;
     margin: 20px;
     padding: 15px 40px;
-    background-color: rgb(113, 148, 177);
-  
+    background-color: rgb(171, 208, 250);
+    box-shadow: 2px 2px 4px rgb(155, 157, 168);
 }
 
 input {
@@ -82,16 +82,17 @@ input {
     border: 2px solid black;
     border-radius: 4px;
     background-color: lightgray;
-    
 }
+
 .submit {
     text-align: center;
     width: auto;
     margin: auto;
     border: 2px solid black;
     border-radius: 4px;
-    background-color: darkgray;
+    background-color: rgb(233, 237, 243);
     cursor: pointer;
+    box-shadow: 2px 2px 4px rgb(155, 157, 168);
 }
 
 .wrong-message {
