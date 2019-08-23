@@ -77,7 +77,7 @@ To-do list:
 Project is: finished (except for tests) with option to expand functionality and DRY out code.
 
 ## Inspiration
-The inspiration for Trivia Time came from an association with a friend of [Rob] (https://github.com/Jerkbert) who hosts trivia nights and needs a new way to keep team scores. We decided to create the whole game of trivia in order to expand functionality and create more robust data relationships.
+The inspiration for Trivia Time came from an association with a friend of [Rob](https://github.com/Jerkbert) who hosts trivia nights and needs a new way to keep team scores. We decided to create the whole game of trivia in order to expand functionality and create more robust data relationships.
 
 ## Contact
 Created by [Catherine O'Hara](www.linkedin.com/in/catherine-o) and [Rob Ballantyne](https://www.linkedin.com/in/rob-ballantyne-73b66b45/)
